@@ -28,7 +28,13 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    val database = Room.databaseBuilder(this,UsuariosDataBase::class.java,"db_usuarios").build()
+
+                    val database = databaseBuilder(
+                        this    ,
+                        UsuariosDataBase::class.java,
+                        "db_usuarios"
+                    ).allowMainThreadQueries().build()
+
                     val dao = database.usuariosDao()
                     
                     val viewModel = UsuariosViewModel(dao)

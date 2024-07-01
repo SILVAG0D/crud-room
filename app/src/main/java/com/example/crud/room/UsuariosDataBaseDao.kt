@@ -18,11 +18,11 @@ interface UsuariosDataBaseDao {
     fun  obterUsuario(id: Int): Flow<Usuarios>
 
     @Insert
-    suspend fun adicionarUsuario(usuario:Usuarios)
+     fun adicionarUsuario(usuario:Usuarios)
 
     @Update
-    suspend fun atualizarUsuario(usuario: Usuarios)
+     fun atualizarUsuario(usuario: Usuarios)
 
     @Delete
-    suspend fun deletarUsuario(usuario: Usuarios)
+     fun deletarUsuario(usuario: Usuarios)
 }
